@@ -52,6 +52,8 @@ async def scrape_to_csv():
             writer.writerows(rows)
 
 asyncio.run(scrape_to_csv())
+
+---
 3. Pažangūs nustatymai: Proksi ir User-Agent
 Norint užtikrinti maksimalų anonimiškumą, rekomenduojama naudoti proksi serverius ir keisti naršyklės identifikatorių.
 
@@ -70,6 +72,8 @@ Python
 iphone_ua = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15..."
 await page.set_user_agent(iphone_ua)
 await page.set_viewport(width=390, height=844)
+
+---
 4. Diegimas serveryje naudojant Docker
 Kad projektas veiktų 24/7, rekomenduojama naudoti konteinerizaciją.
 
@@ -91,6 +95,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 CMD ["python", "skriptas.py"]
+---
 5. Išvados
 „Pydoll“ yra galingas įrankis profesionalams, kuriems reikia apeiti sudėtingas apsaugos sistemas ir pasiekti aukštą duomenų rinkimo našumą. Dėl tiesioginio CDP protokolo naudojimo ši biblioteka užpildo spragą tarp paprasto testavimo ir sudėtingo „anti-detect“ automatizavimo.
 

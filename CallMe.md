@@ -60,5 +60,3 @@ Projektas sukurtas remiantis originaliu [miroslavpejic85](https://github.com/mir
 1. Sukurkite failą pavadinimu `README.md` savo projekto aplanke.
 2. Įklijuokite šį tekstą.
 3. Jei norite dar geresnio vaizdo, įkelkite programėlės ekrano nuotrauką į GitHub ir pridėkite ją viršuje naudodami `![Ekrano nuotrauka](nuoroda-i-nuotrauka.png)`.
-
-Ar norėtumėte, kad padėčiau suformuluoti trumpą žinutę „LinkedIn“ tinklui, kuria galėtumėte pasid

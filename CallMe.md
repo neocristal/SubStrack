@@ -28,12 +28,12 @@
 Įdiekite reikiamas bibliotekas:
 
    ```Bash
-npm install
+   npm install
 
 Paleiskite serverį:
 
    ```Bash
-npm start
+   npm start
 
 Atsidarykite naršyklę ir eikite adresu: http://localhost:3000
 

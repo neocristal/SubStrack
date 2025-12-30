@@ -51,7 +51,7 @@ Projektas paruoštas talpinti Render, Fly.io arba Heroku platformose.
 Svarbu: Kad naršyklė leistų naudoti kamerą ir mikrofoną, reikalingas saugus HTTPS ryšys. Naudojant šiuolaikines talpinimo platformas, SSL sertifikatas sukonfigūruojamas automatiškai.
 
 📝 Licencija
-Projektas platinamas pagal MIT licenciją. Daugiau informacijos rasite [LICENSE](https://www.google.com/search?q=LICENSE)1faile.
+Projektas platinamas pagal MIT licenciją. Daugiau informacijos rasite [LICENSE](https://www.google.com/search?q=LICENSE) faile.
 
 Projektas sukurtas remiantis originaliu [miroslavpejic85](https://github.com/miroslavpejic85/call-me) darbu.
 ---

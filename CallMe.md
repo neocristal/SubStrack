@@ -24,17 +24,17 @@
    ```bash
    git clone [https://github.com/jusu-vardas/call-me.git](https://github.com/jusu-vardas/call-me.git)
    cd call-me
-
+```
 Įdiekite reikiamas bibliotekas:
 
    ```Bash
    npm install
-
+```
 Paleiskite serverį:
 
    ```Bash
    npm start
-
+```
 Atsidarykite naršyklę ir eikite adresu: http://localhost:3000
 
 🛠 Naudojamos technologijos

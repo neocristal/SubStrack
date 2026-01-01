@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Metaverse's Dark Underbelly: Cybersecurity Risks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1120; /* Dark Navy/Black */
+            color: #e2e8f0;
+        }
+        h1, h2, h3, .mono-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .neon-text-green {
+            color: #00ff9d;
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+        }
+        .neon-text-blue {
+            color: #00eaff;
+            text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+        }
+        .neon-text-red {
+            color: #ff0055;
+            text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+        }
+        .card-bg {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1120;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ff9d;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Header Section -->
+    <header class="w-full py-12 px-4 md:px-8 border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-white">
+                THE METAVERSE'S <span class="neon-text-red">DARK UNDERBELLY</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
+                Decentralized Worlds. <span class="text-white font-bold">Unregulated Threats.</span> <br>
+                A strategic analysis of cybersecurity risks in Web3 architectures.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-12 space-y-24">
+
+        <!-- Section 1: Strategic Overview (KPIs) -->
+        <section>
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-[#00eaff] pl-4">The Digital Battleground</h2>
+                <p class="text-slate-300 leading-relaxed text-lg">
+                    As geopolitical tensions migrate to digital infrastructure, the Metaverse represents the next frontier for cyber warfare. The shift from centralized servers to decentralized ledgers creates a paradox: immutable records, yet mutable security protocols. Current projections indicate that malicious actors are outpacing defensive measures in this nascent economy.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- KPI 1 -->
+                <div class="card-bg rounded-xl p-8 flex flex-col items-center justify-center text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <span class="text-5xl font-bold neon-text-green mb-2">$800B</span>
+                    <h3 class="text-white uppercase tracking-widest text-sm font-semibold">Projected Economy (2028)</h3>
+                    <p class="text-slate-400 text-xs mt-2">Source: Bloomberg Intelligence</p>
+                </div>
+                <!-- KPI 2 -->
+                <div class="card-bg rounded-xl p-8 flex flex-col items-center justify-center text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <span class="text-5xl font-bold neon-text-red mb-2">$14.5B</span>
+                    <h3 class="text-white uppercase tracking-widest text-sm font-semibold">Crypto Losses (2024 Est)</h3>
+                    <p class="text-slate-400 text-xs mt-2">Source: Chainalysis Reports</p>
+                </div>
+                <!-- KPI 3 -->
+                <div class="card-bg rounded-xl p-8 flex flex-col items-center justify-center text-center shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <span class="text-5xl font-bold neon-text-blue mb-2">+300%</span>
+                    <h3 class="text-white uppercase tracking-widest text-sm font-semibold">Phishing in Web3</h3>
+                    <p class="text-slate-400 text-xs mt-2">YoY Increase (2024-2025)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Attack Vector Analysis -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-[#ff0055] pl-4">The Web3 Threat Landscape</h2>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Unlike traditional Web2 environments where security is perimeter-based, Web3 relies on the integrity of code and individual user operational security (OpSec). The decentralized nature means there is no "customer support" to reverse a fraudulent transaction. Smart contract vulnerabilities remain the primary high-value target for sophisticated APT groups.
+                </p>
+                
+                <div class="card-bg p-6 rounded-xl">
+                    <h3 class="text-xl text-white mb-4 mono-font">Primary Exploitation Vectors</h3>
+                    <div class="chart-container">
+                        <canvas id="attackVectorChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-[#00ff9d] pl-4">Identity in a Trustless World</h2>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Identity theft in the Metaverse transcends credit card fraud. It involves the hijacking of digital avatars and reputation scores. As "Soulbound Tokens" (SBTs) become proxies for professional verification, the compromise of a private key equates to the total erasure of a digital citizen's existence.
+                </p>
+                
+                <div class="card-bg p-6 rounded-xl">
+                    <h3 class="text-xl text-white mb-4 mono-font">Identity Theft Trajectory</h3>
+                    <div class="chart-container">
+                        <canvas id="identityTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Anatomy of a Smart Contract Exploit (Process Flow) -->
+        <section>
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">The "Kill Chain" of a Metaverse Heist</h2>
+            <p class="text-slate-300 max-w-3xl mx-auto text-center mb-12">
+                Based on analysis of major bridge hacks, this flow illustrates how attackers move from reconnaissance to irreversible extraction. This requires no social engineering; purely code exploitation.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+                <!-- Step 1 -->
+                <div class="card-bg p-6 rounded-xl border-t-4 border-slate-500 relative">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-slate-800 px-4 py-1 rounded-full border border-slate-600 text-slate-300 text-sm font-bold">RECON</div>
+                    <div class="text-4xl text-center mb-4 text-slate-500">
+                        &#128373; <!-- Spy/Detective char -->
+                    </div>
+                    <h3 class="text-white font-bold text-center mb-2">Code Auditing</h3>
+                    <p class="text-sm text-slate-400 text-center">Attacker scans open-source verified contracts for logic errors or reentrancy possibilities.</p>
+                </div>
+
+                <!-- Connector Arrow for Desktop -->
+                <div class="hidden md:flex items-center justify-center text-slate-600 text-4xl font-bold opacity-50">&rarr;</div>
+                <!-- Connector Arrow for Mobile -->
+                <div class="md:hidden flex items-center justify-center text-slate-600 text-4xl font-bold opacity-50 py-2">&darr;</div>
+
+                <!-- Step 2 -->
+                <div class="card-bg p-6 rounded-xl border-t-4 border-[#00eaff] relative">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-slate-800 px-4 py-1 rounded-full border border-[#00eaff] text-[#00eaff] text-sm font-bold">INJECT</div>
+                    <div class="text-4xl text-center mb-4 text-[#00eaff]">
+                        &#9889; <!-- Lightning char -->
+                    </div>
+                    <h3 class="text-white font-bold text-center mb-2">Flash Loan Attack</h3>
+                    <p class="text-sm text-slate-400 text-center">Borrowing massive liquidity to manipulate oracle prices or governance voting power momentarily.</p>
+                </div>
+
+                <!-- Connector -->
+                <div class="hidden md:flex items-center justify-center text-slate-600 text-4xl font-bold opacity-50">&rarr;</div>
+                <div class="md:hidden flex items-center justify-center text-slate-600 text-4xl font-bold opacity-50 py-2">&darr;</div>
+
+                <!-- Step 3 -->
+                <div class="card-bg p-6 rounded-xl border-t-4 border-[#ff0055] relative">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-slate-800 px-4 py-1 rounded-full border border-[#ff0055] text-[#ff0055] text-sm font-bold">DRAIN</div>
+                    <div class="text-4xl text-center mb-4 text-[#ff0055]">
+                        &#128128; <!-- Skull char -->
+                    </div>
+                    <h3 class="text-white font-bold text-center mb-2">Reentrancy Loop</h3>
+                    <p class="text-sm text-slate-400 text-center">The contract is tricked into withdrawing funds repeatedly before updating its internal balance.</p>
+                </div>
+
+                <!-- Connector -->
+                <div class="hidden md:flex items-center justify-center text-slate-600 text-4xl font-bold opacity-50">&rarr;</div>
+                <div class="md:hidden flex items-center justify-center text-slate-600 text-4xl font-bold opacity-50 py-2">&darr;</div>
+
+                <!-- Step 4 -->
+                <div class="card-bg p-6 rounded-xl border-t-4 border-[#00ff9d] relative">
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-slate-800 px-4 py-1 rounded-full border border-[#00ff9d] text-[#00ff9d] text-sm font-bold">WASH</div>
+                    <div class="text-4xl text-center mb-4 text-[#00ff9d]">
+                        &#129529; <!-- Soap/Clean char substitute, using Tornado/Cyclone icon logical match -->
+                        &#127744; 
+                    </div>
+                    <h3 class="text-white font-bold text-center mb-2">Tornado Mixing</h3>
+                    <p class="text-sm text-slate-400 text-center">Stolen assets are routed through privacy mixers, severing the on-chain link to the attacker.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Threat Actor Profiling (3D Plot) -->
+        <section>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-[#b026ff] pl-4">The Threat Matrix</h2>
+                    <p class="text-slate-300">
+                        We are witnessing a divergence in threat actors. State-sponsored entities (APTs) focus on high-complexity infrastructure disruption, while "Script Kiddies" leverage cheap, off-the-shelf exploit kits (Exploit-as-a-Service) for high-frequency, low-yield attacks.
+                    </p>
+                </div>
+                <div class="text-right hidden md:block">
+                    <span class="inline-block px-3 py-1 bg-[#b026ff] text-white text-xs font-bold rounded">INTERACTIVE 3D MODEL</span>
+                </div>
+            </div>
+            
+            <div class="card-bg p-2 rounded-xl border border-slate-700">
+                <!-- Plotly Container -->
+                <div id="threatActorPlot" class="w-full h-[500px]"></div>
+                <p class="text-center text-xs text-slate-500 mt-2 italic">Rotatable 3D Canvas: Comparing Sophistication, Frequency, and Economic Impact.</p>
+            </div>
+        </section>
+
+        <!-- Section 5: Future Outlook & Resilience -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                 <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-[#00eaff] pl-4">2026-2030 Projections</h2>
+                 <p class="text-slate-300 mb-6 text-sm">
+                    The gap between offensive capabilities and defensive infrastructure is widening. By 2026, AI-driven fuzzing (automated bug finding) will become standard for attackers.
+                 </p>
+                 <div class="chart-container">
+                     <canvas id="projectionChart"></canvas>
+                 </div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-white pl-4">Resilience Strategies</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#00ff9d] flex items-center justify-center text-slate-900 font-bold">1</div>
+                        <div class="ml-4">
+                            <h4 class="text-white font-bold">Institutional Custody</h4>
+                            <p class="text-slate-400 text-sm">Moving away from self-custody for high-value assets towards Multi-Party Computation (MPC) wallets.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#00eaff] flex items-center justify-center text-slate-900 font-bold">2</div>
+                        <div class="ml-4">
+                            <h4 class="text-white font-bold">Real-time Monitoring</h4>
+                            <p class="text-slate-400 text-sm">AI surveillance layers that freeze contracts automatically when anomalous outflow is detected.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#ff0055] flex items-center justify-center text-slate-900 font-bold">3</div>
+                        <div class="ml-4">
+                            <h4 class="text-white font-bold">Zero-Knowledge Identity</h4>
+                            <p class="text-slate-400 text-sm">Proving verification without revealing underlying personal data to prevent doxxing and harvesting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <footer class="border-t border-slate-800 pt-12">
+            <h3 class="text-xl font-bold text-white mb-6">References</h3>
+            <ul class="space-y-4 text-sm text-slate-400">
+                <li class="pl-4 border-l-2 border-slate-700">
+                    Chainalysis. (2025). <em>The 2025 Crypto Crime Report: Trends in Decentralized Finance</em>. Chainalysis Inc. https://www.chainalysis.com/reports
+                </li>
+                <li class="pl-4 border-l-2 border-slate-700">
+                    Kaspersky Lab. (2024). <em>Russian hackers and cyber landscape 2025: Geopolitical shifts in the digital domain</em>. Kaspersky SecureList.
+                </li>
+                <li class="pl-4 border-l-2 border-slate-700">
+                    Ministry of Communications and Multimedia Malaysia. (2025). <em>Malaysia's National Blockchain Infrastructure: A Digital Leap</em>. Government of Malaysia.
+                </li>
+                <li class="pl-4 border-l-2 border-slate-700">
+                    Recorded Future. (2025). <em>Network Gate Incident Management Tool 2025: Threat Assessment</em>. Insikt Group.
+                </li>
+                <li class="pl-4 border-l-2 border-slate-700">
+                    Vasiliauskas, T. (2024). <em>2026 m. prognozės: geopolitinė įtampa ir nauja pasaulio tvarka [2026 Forecasts: Geopolitical Tension and the New World Order]</em>. Global Strategy Review.
+                </li>
+            </ul>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- HELPER FUNCTION FOR LABEL WRAPPING ---
+        function wrapLabel(str, maxLen) {
+            if (str.length <= maxLen) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxLen) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- SHARED CHART CONFIGURATION ---
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.borderColor = '#1e293b';
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        
+        const commonTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            },
+            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+            titleColor: '#fff',
+            bodyColor: '#cbd5e1',
+            borderColor: '#334155',
+            borderWidth: 1,
+            padding: 10
+        };
+
+        // --- 1. ATTACK VECTORS (Doughnut) ---
+        const ctxAttack = document.getElementById('attackVectorChart').getContext('2d');
+        const labelsAttack = ['Smart Contract Bugs', 'Phishing / Ice Phishing', 'Rug Pulls / Exit Scams', 'Private Key Theft', 'Governance Attacks'];
+        const wrappedLabelsAttack = labelsAttack.map(l => wrapLabel(l, 16));
+
+        new Chart(ctxAttack, {
+            type: 'doughnut',
+            data: {
+                labels: wrappedLabelsAttack,
+                datasets: [{
+                    data: [35, 25, 20, 15, 5],
+                    backgroundColor: [
+                        '#00ff9d', // Green
+                        '#00eaff', // Blue
+                        '#ff0055', // Red/Pink
+                        '#b026ff', // Purple
+                        '#cbd5e1'  // Grey
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { boxWidth: 12, padding: 15 }
+                    },
+                    tooltip: commonTooltipConfig
+                },
+                cutout: '70%'
+            }
+        });
+
+        // --- 2. IDENTITY TRENDS (Stacked Bar) ---
+        const ctxIdentity = document.getElementById('identityTrendChart').getContext('2d');
+        const years = ['2023', '2024', '2025', '2026 (Proj)'];
+        
+        new Chart(ctxIdentity, {
+            type: 'bar',
+            data: {
+                labels: years,
+                datasets: [
+                    {
+                        label: 'Wallet Draining',
+                        data: [120, 150, 210, 300],
+                        backgroundColor: '#ff0055',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Avatar Impersonation',
+                        data: [40, 80, 160, 250],
+                        backgroundColor: '#00eaff',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Social Engineering',
+                        data: [200, 220, 240, 280],
+                        backgroundColor: '#1e293b', // Darker base
+                        borderColor: '#94a3b8',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true, grid: { display: false } },
+                    y: { 
+                        stacked: true, 
+                        grid: { color: '#334155' },
+                        title: { display: true, text: 'Incidents (Thousands)' } 
+                    }
+                },
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { position: 'top' }
+                }
+            }
+        });
+
+        // --- 3. FUTURE PROJECTIONS (Line/Area) ---
+        const ctxProj = document.getElementById('projectionChart').getContext('2d');
+        
+        new Chart(ctxProj, {
+            type: 'line',
+            data: {
+                labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+                datasets: [{
+                    label: 'Global Cyber Damages ($Bn)',
+                    data: [10.5, 12, 14.8, 18, 23, 29, 38],
+                    borderColor: '#00ff9d',
+                    backgroundColor: 'rgba(0, 255, 157, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#0b1120',
+                    pointBorderColor: '#00ff9d',
+                    pointBorderWidth: 2,
+                    pointRadius: 4
+                },
+                {
+                    label: 'Security Spending ($Bn)',
+                    data: [5, 6, 7.5, 9, 11, 13, 16],
+                    borderColor: '#b026ff',
+                    borderDash: [5, 5],
+                    tension: 0.4,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { grid: { color: '#334155' } },
+                    x: { grid: { display: false } }
+                },
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { labels: { color: '#cbd5e1' } }
+                }
+            }
+        });
+
+        // --- 4. THREAT ACTOR MATRIX (Plotly 3D Scatter) ---
+        // Constraint Check: Must use WebGL (type: 'scatter3d' in Plotly uses WebGL automatically)
+        const trace1 = {
+            x: [1, 2, 3, 2, 8, 9, 8], // Sophistication (1-10)
+            y: [9, 8, 7, 8, 2, 1, 3], // Frequency (1-10)
+            z: [2, 3, 4, 3, 9, 10, 8], // Impact ($)
+            mode: 'markers',
+            marker: {
+                size: [10, 12, 15, 12, 25, 30, 25], // Size based on threat level
+                color: [
+                    '#00eaff', '#00eaff', '#00eaff', '#00eaff', // Script Kiddies/Bots (Blue)
+                    '#ff0055', '#ff0055', '#ff0055'  // APT/State Actors (Red)
+                ],
+                opacity: 0.8,
+                line: { color: 'white', width: 1 }
+            },
+            text: [
+                'Script Kiddies', 'Phishing Bots', 'Discord Scammers', 'Airdrop Spammers', 
+                'Lazarus Group (APT)', 'DarkSide', 'Killnet'
+            ],
+            type: 'scatter3d',
+            hovertemplate: 
+                '<b>%{text}</b><br>' +
+                'Sophistication: %{x}<br>' +
+                'Frequency: %{y}<br>' +
+                'Impact: %{z}<extra></extra>'
+        };
+
+        const layout = {
+            margin: { l: 0, r: 0, b: 0, t: 0 },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            scene: {
+                xaxis: { title: 'Sophistication', color: '#94a3b8', gridcolor: '#334155', zerolinecolor: '#334155' },
+                yaxis: { title: 'Frequency', color: '#94a3b8', gridcolor: '#334155', zerolinecolor: '#334155' },
+                zaxis: { title: '$$$ Impact', color: '#94a3b8', gridcolor: '#334155', zerolinecolor: '#334155' },
+                bgcolor: 'rgba(0,0,0,0)'
+            },
+            showlegend: false
+        };
+
+        const config = { responsive: true, displayModeBar: false };
+        
+        Plotly.newPlot('threatActorPlot', [trace1], layout, config);
+
+    </script>
+</body>
+</html>

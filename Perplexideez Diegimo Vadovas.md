@@ -28,9 +28,10 @@ Geriausia Perplexideez naudoti kartu su **Authentik** arba kitu OIDC teikėju, j
 
 ## 🚀 Diegimo komandos
 1. **DB Paruošimas:**
+
    ```bash
-   docker run --env DATABASE_URL=... ghcr.io/brunostjohn/perplexideez/migrate
-```
+   docker run --env DATABASE_URL=... ghcr.io/brunostjohn/perplexideez/migrate```
+
    Paleidimas:
 
 ```Bash
@@ -38,9 +39,7 @@ docker-compose up -d
 ```
 🔐 SSO / Authentik Integracija
 Jei naudojate Authentik, nukreipimo URL (Redirect URL): https://[JŪSŲ_DOMENAS]/auth/callback/generic-oauth
-
 ---
-
 ### 💡 Svarbios pastabos:
 * **Bare Metal:** Autorius griežtai nepalaiko diegimo tiesiai į operacinę sistemą (be Docker) – tokios problemos nebus sprendžiamos.
 * **Kubernetes:** Helm lentelės dar ruošiamos, todėl rekomenduojama remtis autoriaus „homelab“ pavyzdžiais, jei diegiate į K8s klasterį.

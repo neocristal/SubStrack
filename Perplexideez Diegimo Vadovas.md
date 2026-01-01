@@ -29,9 +29,9 @@ Geriausia Perplexideez naudoti kartu su **Authentik** arba kitu OIDC teikėju, j
 ## 🚀 Diegimo komandos
 1. **DB Paruošimas:**
 
-   ```bash
-   docker run --env DATABASE_URL=... ghcr.io/brunostjohn/perplexideez/migrate```
-
+```bash
+   docker run --env DATABASE_URL=... ghcr.io/brunostjohn/perplexideez/migrate
+```
    Paleidimas:
 
 ```Bash
